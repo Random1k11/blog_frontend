@@ -1,0 +1,39 @@
+@import './_variables';
+@import './_navigation';
+@import './home';
+@import './masonry-post';
+@import './post-masonry';
+@import './tag-row';
+@import './post-grid';
+@import "blog-post";
+@import "./_footer";
+
+html body {
+    font-family: -apple-system,sestem-ui,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-weight: 500;
+    margin: 0;
+    background-color: $background;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.row {
+    margin: 4em 20px;
+}
+
+.overlay::before {
+    z-index: 1;
+    //content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
