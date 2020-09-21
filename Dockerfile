@@ -2,7 +2,7 @@ FROM node:alpine
 
 # Set working directory
 WORKDIR /usr/app
-
+RUN apk --no-cache add curl
 # Install PM2 globally
 RUN npm install --global pm2
 
@@ -15,6 +15,8 @@ RUN npm install
 
 # Copy all files
 COPY ./ ./
+
+RUN chmod a+rwx -R ./
 
 # Build app
 RUN npm run build
